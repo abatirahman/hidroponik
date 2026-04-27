@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 56px;
+      }
+      #galeri img {
+        height: 250px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .modal-booking .modal-content {
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .modal-booking .modal-header {
+        background: #198754;
+      }
+      .modal-booking .modal-title,
+      .modal-booking .btn-close {
+        color: white;
+        filter: brightness(10);
+      }
+      .btn-wa {
+        background: #25d366;
+        color: white;
+        border: none;
+        font-weight: 600;
+      }
+      .btn-wa:hover {
+        background: #1ebe5d;
+        color: white;
+      }
+      .card {
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+      }
+      .card img {
+        transition: transform 0.4s ease;
+      }
+      .card:hover img {
+        transform: scale(1.05);
+      }
+      .badge-stok-ada {
+        background: #d1e7dd;
+        color: #0a4d2e;
+        font-size: 13px;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+      .badge-stok-habis {
+        background: #f8d7da;
+        color: #6b0000;
+        font-size: 13px;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web saya | fahmy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  </head>
+  <body class="bg-warning bg-opacity-10" style="padding-top: 56px">
+    <!-- header -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-success navbar-light fixed-top" shadow>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#hidroponik">HIDROPONIK</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#produk">PRODUK</a></li>
+              <li class="nav-item"><a class="nav-link" href="#profil">PROFIL</a></li>
+              <li class="nav-item"><a class="nav-link" href="#lokasi">LOKASI</a></li>
+              <li class="nav-item"><a class="nav-link" href="#galeri">GALERI</a></li>
+              <li class="nav-item"><a class="nav-link" href="#order">ORDER</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- akhir header -->
+
+    <!-- banner -->
+    <div id="hidroponik" style="position: relative; overflow: hidden">
+      <img src="hidroponik3.jpg" class="img-fluid w-100" style="height: 100vh; object-fit: cover" />
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center">
+        <h1 style="color: white; font-size: 60px; font-weight: bold; text-shadow: 2px 2px 5px black">HIDROPONIK</h1>
+        <p style="color: white; font-size: 20px; text-shadow: 2px 2px 5px black; margin-top: 20px">makan sayuranmu & hidup lebih lama.</p>
+      </div>
+    </div>
+    <!-- akhir banner -->
+
+    <div class="container">
+      <!-- produk -->
+      <div id="produk" style="padding-bottom: 3rem">
+        <h1 class="text-center text-success bg-warning mt-5 mb-3">PRODUK</h1>
+        <div class="row g-3 mt-1">
+          <!-- Kangkung -->
+          <div class="col-3" data-aos="fade-up" data-aos-delay="0">
+            <div class="card shadow">
+              <img src="kangkung.jpg" class="card-img-top" alt="kangkung" style="height: 200px; object-fit: cover" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Kangkung</h5>
+                <p class="card-text">ayo hidup sehat dengan makan kami</p>
+
+                <div class="mt-auto">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge-stok-ada">&#9679; Stok Tersedia</span>
+                    <span class="badge bg-warning text-dark">Rp 5.000</span>
+                  </div>
+                  <a href="#" class="btn btn-warning btn-sm w-100" onclick="bukaBooking('Kangkung')">booking</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bayam -->
+          <div class="col-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="card shadow">
+              <img src="bayam.jpeg" class="card-img-top" alt="bayam" style="height: 200px; object-fit: cover" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Bayam</h5>
+                <p class="card-text">ayo hidup sehat dengan makan kami</p>
+
+                <div class="mt-auto">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge-stok-ada">&#9679; Stok Tersedia</span>
+                    <span class="badge bg-warning text-dark">Rp 5.000</span>
+                  </div>
+                  <a href="#" class="btn btn-warning btn-sm w-100" onclick="bukaBooking('Bayam')">booking</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pakcoy -->
+          <div class="col-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="card shadow">
+              <img src="pakcoy1.png" class="card-img-top" alt="pakcoy" style="height: 200px; object-fit: cover" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Pakcoy</h5>
+                <p class="card-text">ayo hidup sehat dengan makan kami</p>
+
+                <div class="mt-auto">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge-stok-ada">&#9679; Stok Tersedia</span>
+                    <span class="badge bg-warning text-dark">Rp 5.000</span>
+                  </div>
+                  <a href="#" class="btn btn-warning btn-sm w-100" onclick="bukaBooking('Pakcoy')">booking</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Selada -->
+          <div class="col-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="card shadow">
+              <img src="sawii.jpg" class="card-img-top" alt="sawi" style="height: 200px; object-fit: cover" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Selada</h5>
+                <p class="card-text">ayo hidup sehat dengan makan kami</p>
+
+                <div class="mt-auto">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge-stok-ada">&#9679; Stok Tersedia</span>
+                    <span class="badge bg-warning text-dark">Rp 5.000</span>
+                  </div>
+                  <a href="#" class="btn btn-warning btn-sm w-100" onclick="bukaBooking('Selada')">booking</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- akhir produk -->
+
+      <!-- profil -->
+      <div id="profil" style="min-height: 100vh">
+        <h1 class="text-center text-success bg-warning mt-3">PROFIL</h1>
+        <div class="row mt-5">
+          <div class="col-3">
+            <img src="pp.jpeg" class="img-fluid w-100" style="height: 400px; object-fit: cover" alt="Foto Profil" />
+          </div>
+          <div class="col-9">
+            <p class="text-secondary">
+              Hidroponik adalah sistem budidaya tanaman yang mengeliminasi penggunaan tanah dan mengandalkan media air atau larutan nutrisi sebagai pengganti. Dalam metode ini, tanaman tumbuh dengan menyerap nutrisi langsung melalui akar
+              mereka, yang ditempatkan dalam media yang mendukung atau melalui larutan nutrisi yang sirkulasi.<br /><br />
+              Teknik hidroponik mengurangi drastis penggunaan air dalam pertanian. Sebagai perbandingan, untuk mendapatkan 1 kilogram tomat melalui penanaman tradisional di tanah, dibutuhkan sekitar 400 liter air. Namun, dengan hidroponik,
+              jumlah tersebut dapat dipangkas menjadi hanya sekitar 70 liter. Penghematan air ini menjadi kunci keberlanjutan di masa depan, terutama di daerah yang memiliki keterbatasan air.<br /><br />
+              Hidroponik memungkinkan pertumbuhan tanaman yang lebih cepat dan hasil yang lebih besar dibandingkan dengan metode konvensional. Dengan kontrol yang lebih baik terhadap nutrisi dan lingkungan tanaman, hasil panen dapat
+              ditingkatkan secara signifikan.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- akhir profil -->
+
+      <!-- lokasi -->
+      <div id="lokasi" style="min-height: 100vh">
+        <h1 class="text-center text-success bg-warning mt-3">LOKASI</h1>
+        <div class="row mt-3">
+          <div class="col-md-8">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7976.601901156626!2d102.03835098639321!3d1.5802308936200649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdesa%20simpang%20ayam!5e0!3m2!1sid!2sid!4v1777046260907!5m2!1sid!2sid"
+              width="100%"
+              height="350"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="rounded shadow"
+            ></iframe>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-success">Alamat Kami</h5>
+            <p>
+              Jl. Selangat<br />
+              Desa Simpang Ayam<br />
+              📞 085280368297<br />
+              📧 fahmyikhwan19@email.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- akhir lokasi -->
+
+      <!-- galeri -->
+      <div id="galeri" style="min-height: 100vh">
+        <h1 class="text-center text-success bg-warning mt-3">GALERI</h1>
+        <div class="row mt-3 g-3 pb-5">
+          <div class="col-4"><img src="hidroponik1.jpg" class="img-fluid rounded shadow" alt="galeri 1" /></div>
+          <div class="col-4"><img src="hidroponik2.jpg" class="img-fluid rounded shadow" alt="galeri 2" /></div>
+          <div class="col-4"><img src="hidroponik4.jpeg" class="img-fluid rounded shadow" alt="galeri 3" /></div>
+          <div class="col-4"><img src="hidroponik5.jpg" class="img-fluid rounded shadow" alt="galeri 4" /></div>
+          <div class="col-4"><img src="hidroponik6.jpg" class="img-fluid rounded shadow" alt="galeri 5" /></div>
+          <div class="col-4"><img src="hidroponik7.jpg" class="img-fluid rounded shadow" alt="galeri 6" /></div>
+        </div>
+      </div>
+      <!-- akhir galeri -->
+    </div>
+    <!-- akhir container -->
+
+    <!-- order -->
+    <div id="order" style="min-height: 100vh">
+      <h1 class="text-center text-success bg-warning mt-3">ORDER</h1>
+      <div class="text-center mt-5">
+        <img src="hidroponik1.jpg" class="rounded-circle shadow mb-4" style="width: 200px; height: 200px; object-fit: cover" />
+        <h4 class="text-success">Pesan Sekarang!</h4>
+        <p class="text-secondary">Hubungi kami langsung via WhatsApp untuk pemesanan produk hidroponik segar kami.</p>
+        <a href="https://wa.me/6285280368297" target="_blank" class="btn btn-success btn-lg shadow px-5 py-3 mt-2" style="font-size: 20px">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" style="margin-right: 8px" />
+          Chat WhatsApp
+        </a>
+      </div>
+    </div>
+    <!-- akhir order -->
+
+    <!-- Modal Booking -->
+    <div class="modal fade modal-booking" id="modalBooking" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Form Booking Produk</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Produk dipilih</label><br />
+              <span class="badge bg-success fs-6" id="namaProdukModal">-</span>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Nama lengkap</label>
+              <input type="text" class="form-control" id="inputNama" placeholder="Masukkan nama kamu..." />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">No. WhatsApp</label>
+              <input type="number" class="form-control" id="inputWA" placeholder="08xxxxxxxxxx" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Jumlah (ikat/kg)</label>
+              <input type="number" class="form-control" id="inputJumlah" value="1" min="1" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Tanggal ambil / antar</label>
+              <input type="date" class="form-control" id="inputTanggal" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Alamat pengiriman <span class="text-muted">(opsional)</span></label>
+              <textarea class="form-control" id="inputAlamat" rows="2" placeholder="Tulis alamat lengkap..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button class="btn btn-wa" onclick="kirimBooking()">&#128241; Kirim via WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-success text-white text-center p-3 mt-5">
+      <p class="mb-0">created by Ikhwanul Fahmy 2026 - Ayo Hijaukan Duniamu</p>
+    </footer>
+
+    <!-- Script Bootstrap dulu, baru AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700, once: true });
+
+      function bukaBooking(namaProduk) {
+        document.getElementById("namaProdukModal").innerText = namaProduk;
+        new bootstrap.Modal(document.getElementById("modalBooking")).show();
+      }
+
+      function kirimBooking() {
+        const nama = document.getElementById("inputNama").value;
+        const wa = document.getElementById("inputWA").value;
+        const jumlah = document.getElementById("inputJumlah").value;
+        const tanggal = document.getElementById("inputTanggal").value;
+        const alamat = document.getElementById("inputAlamat").value;
+        const produk = document.getElementById("namaProdukModal").innerText;
+
+        if (!nama || !wa || !tanggal) {
+          alert("Nama, No. WA, dan Tanggal wajib diisi!");
+          return;
+        }
+
+        const pesan = `Halo, saya mau booking:%0A%0A` + `Produk: ${produk}%0A` + `Nama: ${nama}%0A` + `No. WA: ${wa}%0A` + `Jumlah: ${jumlah} ikat%0A` + `Tanggal: ${tanggal}%0A` + `Alamat: ${alamat || "-"}`;
+
+        window.open(`https://wa.me/6285280368297?text=${pesan}`, "_blank");
+      }
+    </script>
+  </body>
+</html>
